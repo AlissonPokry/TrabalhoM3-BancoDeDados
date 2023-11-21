@@ -124,7 +124,7 @@ body{
     margin: 10px 0 10px 0;
 }
 
-.label-input input{
+.label-input input, .label-input select{
     background-color: #424242;
     color: #c1c1c1;
     border: none;
@@ -133,7 +133,11 @@ body{
     width: 70%;
 }
 
-.label-input input:focus{
+.label-input select{
+    min-width: 72.5%;
+}
+
+.label-input input:focus, .label-input select:focus{
     outline: solid 2px #616161;
 }
 
@@ -157,4 +161,24 @@ body{
     background-color: #f78787;
     color: #ff0000;
     cursor: pointer;
+}
+
+.voltar-button{
+    position: inherit;
+    display: flex;
+    left: 30px;
+    top: 30px;
+    font-size: 25px;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.4s;
+}
+
+.voltar-button:hover{
+    color: #ff0000;
+}
+
+.voltar-icon{
+    margin-right: 5px;
 }

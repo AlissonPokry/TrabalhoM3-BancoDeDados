@@ -12,6 +12,10 @@
 
 <body>
     <header class="cabecalho">
+        <a href="index.html" class="voltar-button">
+            <i class="fa-solid fa-caret-left voltar-icon"></i>
+            <p class="voltar-word">Voltar</p>
+        </a>
         <div class="logo-name">
             <i class="fa-solid fa-gauge-high logo"></i>
             <div class="name-surname">
@@ -45,7 +49,12 @@
                 </div>
                 <div class="label-input">
                     <label class="label">Status:</label>
-                    <input required type="text">
+                    <select class="input">
+                        <option value="" required disabled selected>Selecione uma opção</option>
+                        <option value="emDia">Em dia</option>
+                        <option value="semPendencias">Sem pendências</option>
+                        <option value="devendo">Devendo</option>
+                    </select>
                 </div>
                 <div class="label-input">
                     <label class="label">Logradouro:</label>
