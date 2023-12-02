@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2618ebe7f8.js" crossorigin="anonymous"></script>
+    <script src="showOption.js"></script>
+    <title>Concessionária</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <a href="index.html" class="voltar-button">
+            <i class="fa-solid fa-caret-left voltar-icon"></i>
+            <p class="voltar-word">Voltar</p>
+        </a>
+        <div class="logo-name">
+            <i class="fa-solid fa-gauge-high logo"></i>
+            <div class="name-surname">
+                <p class="name"><span style="color: red">High</span>speed</p>
+                <p class="surname">Concessionária</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="principal">
+        <form class="formulario">
+            <h1 class="titulo">O que deseja ver?</h1>
+            <select class="selecionar" id="select" onChange="showOption()">
+                <option value="" disabled selected>Selecione uma opção</option>
+                <option value="cliente">Cliente</option>
+                <option value="veiculo">Veículo</option>
+                <option value="funcionario">Funcionario</option>
+            </select>
+            <div id="divCliente" class="cliente" style="display: none;">
+                 
+            </div>
+            <div id="divVeiculo" class="veiculo" style="display: none;">
+                
+            </div>
+            <div id="divFuncionario" class="funcionario" style="display: none;">
+                
+            </div>
+        </form>
+    </main>
+
+    <footer class="rodape">
+        <p class="alunos">Feito por Alisson Pokrywiecki da Silva e Vinícius Setti</p>
+        <p class="professor">Professor de Banco de Dados Mauricio Passeto de Freitas</p>
+        <p class="curso">Ciência da Computação</p>
+        <p class="universidade">Universidade do Vale do Itajaí (UNIVALI) - Campus Itajaí</p>
+    </footer> 
+</body>
+</html>

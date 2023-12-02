@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concessionária</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2618ebe7f8.js" crossorigin="anonymous"></script>
+    <script src="showOption.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <a href="index.html" class="voltar-button">
+            <i class="fa-solid fa-caret-left voltar-icon"></i>
+            <p class="voltar-word">Voltar</p>
+        </a>
+        <div class="logo-name">
+            <i class="fa-solid fa-gauge-high logo"></i>
+            <div class="name-surname">
+                <p class="name"><span style="color: red">High</span>speed</p>
+                <p class="surname">Concessionária</p>
+            </div>
+        </div>
+    </header>
+    <main class="principal">
+        <form class="formulario">
+            <h1 class="titulo">O que deseja adicionar?</h1>
+            <select class="selecionar" id="select" onChange="showOption()">
+                <option value="" disabled selected>Selecione uma opção</option>
+                <option value="cliente">Cliente</option>
+                <option value="veiculo">Veículo</option>
+                <option value="funcionario">Funcionario</option>
+            </select>
+
+            <div id="divCliente" class="cliente">
+                <div class="label-input">
+                    <label for="nome" class="label">Nome:</label>
+                    <input id="nome" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="cpf" class="label">CPF/CNPJ:</label>
+                    <input id="cpf" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="email" class="label">Email:</label>
+                    <input id="email" required type="email">
+                </div>
+                <div class="label-input">
+                    <label for="status" class="label">Status:</label>
+                    <select id="status" class="input">
+                        <option value="" required disabled selected>Selecione uma opção</option>
+                        <option value="emDia">Em dia</option>
+                        <option value="semPendencias">Sem pendências</option>
+                        <option value="devendo">Devendo</option>
+                    </select>
+                </div>
+                <div class="label-input">
+                    <label for="logradouro" class="label">Logradouro:</label>
+                    <input id="logradouro" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="numero" class="label">Numero:</label>
+                    <input id="numero" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="bairro" class="label">Bairro:</label>
+                    <input id="bairro" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="cidade" class="label">Cidade:</label>
+                    <input id="cidade" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="estado" class="label">Estado:</label>
+                    <input id="estado" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="pais" class="label">País:</label>
+                    <input id="pais" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="telefone" class="label">Telefone:</label>
+                    <input id="telefone" required type="text">
+                </div>
+
+                <button onclick="submitForm()" id="btnAdd" class="botao">Adicionar</button>
+            </div>
+
+            <div id="divVeiculo" class="cliente">
+                <div class="label-input">
+                    <label for="marca" class="label">Marca:</label>
+                    <input id="marca" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="modelo" class="label">Modelo:</label>
+                    <input id="modelo" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="cor" class="label">Cor:</label>
+                    <input id="cor" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="chassi" class="label">Chassi:</label>
+                    <input id="chassi" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="quantidade" class="label">Quantidade:</label>
+                    <input id="quantidade" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="valor" class="label">Valor:</label>
+                    <input id="valor" required type="text">
+                </div>
+
+                <button onclick="submitForm()" id="btnAdd" class="botao">Adicionar</button>
+            </div>
+
+            <div id="divFuncionario" class="cliente">
+                <div class="label-input">
+                    <label for="nome" class="label">Nome:</label>
+                    <input id="nome" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="cpf" class="label">CPF:</label>
+                    <input id="cpf" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="email" class="label">Email:</label>
+                    <input id="email" required type="email">
+                </div>
+                <div class="label-input">
+                    <label for="cargo" class="label">Cargo:</label>
+                    <input id="cargo" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="comissao" class="label">Comissão:</label>
+                    <input id="comissao" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="status" class="label">Status:</label>
+                    <select id="status" class="input">
+                        <option value="" required disabled selected>Selecione uma opção</option>
+                        <option value="ativo">Ativo</option>
+                        <option value="ferias">De férias</option>
+                        <option value="atestado">De atestado</option>
+                    </select>
+                </div>
+                <div class="label-input">
+                    <label for="logradouro" class="label">Logradouro:</label>
+                    <input id="logradouro" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="numero" class="label">Numero:</label>
+                    <input id="numero" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="bairro" class="label">Bairro:</label>
+                    <input id="bairro" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="cidade" class="label">Cidade:</label>
+                    <input id="cidade" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="estado" class="label">Estado:</label>
+                    <input id="estado" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="pais" class="label">País:</label>
+                    <input id="pais" required type="text">
+                </div>
+                <div class="label-input">
+                    <label for="telefone" class="label">Telefone:</label>
+                    <input id="telefone" required type="text">
+                </div>
+
+                <button onclick="submitForm()" id="btnAdd" class="botao">Adicionar</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="rodape">
+        <p class="alunos">Feito por Alisson Pokrywiecki da Silva e Vinícius Setti</p>
+        <p class="professor">Professor de Banco de Dados Mauricio Passeto de Freitas</p>
+        <p class="curso">Ciência da Computação</p>
+        <p class="universidade">Universidade do Vale do Itajaí (UNIVALI) - Campus Itajaí</p>
+    </footer>
+</body>
+
+</html>
